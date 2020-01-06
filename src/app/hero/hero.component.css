@@ -1,0 +1,54 @@
+.jumbotron {
+	margin: 0;
+	background: url('/assets/imgs/film6.jpg') 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 50vh;
+}
+
+
+
+.view1 .mask1 {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    bottom: 0px!important;
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-attachment: fixed;
+
+}
+.rgba-black-light,.rgba-black-light::after {
+   background-color: #2125298f !important;
+
+
+}
+
+.view1 {
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+.mycon{
+
+	margin-left: 140px !important;
+	margin-top: 100px !important;
+     font-family: 'Cinzel Decorative', cursive;
+
+}
+
+@media (max-width: 700px) {
+
+  .mycon{
+
+display: none !important;
+
+
+}
+
+
+
+}

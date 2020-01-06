@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+<app-hero></app-hero>
+<div id="test" class="w-75 m-0 mx-auto p-0">
+<div class="row d-flex justify-content-between">
+
+    <div class="card  col-md-6 col-sm-12 ">
+      <img src="../assets/imgs/blog.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Lifestyle</h5>
+        <a href="#" class="card-text">Link title Link</a>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <div><button type="button" class="btn btn-sm btn-outline-secondary">View comments</button></div>
+        <div>
+          <button class="btn likebtn" (click)="status=!status" [ngClass]="status ? 'active' : 'likebtn'"></button>
+        </div>
+      </div>
+    </div>
+    <div class="card  col-md-6 col-sm-12">
+      <img src="../assets/imgs/blog.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Photography</h5>
+       <a href="#" class="card-text">Link title Link</a>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+         <div><button type="button" class="btn btn-sm btn-outline-secondary">View comments</button></div>
+        <div>
+          <button class="btn likebtn" (click)="status1=!status1" [ngClass]="status1 ? 'active' : 'likebtn'"></button>
+        </div>
+      </div>
+    </div>
+    <div class="card  col-md-6 col-sm-12">
+      <img src="../assets/imgs/blog.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Design</h5>
+       <a href="#" class="card-text">Link title Link</a>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+         <div><button type="button" class="btn btn-sm btn-outline-secondary">View comments</button></div>
+        <div>
+          <button class="btn likebtn" (click)="status2=!status2" [ngClass]="status2 ? 'active' : 'likebtn'"></button>
+        </div>
+      </div>
+    </div>
+        <div class="card  col-md-6">
+      <img src="../assets/imgs/blog.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Design</h5>
+       <a href="#" class="card-text">Link title Link</a>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+         <div><button type="button" class="btn btn-sm btn-outline-secondary">View comments</button></div>
+        <div>
+          <button class="btn likebtn" (click)="status3=!status3" [ngClass]="status3 ? 'active' : 'likebtn'"></button>
+        </div>
+      </div>
+    </div>
+
+</div>
+</div>
+
+
+<app-footer></app-footer>

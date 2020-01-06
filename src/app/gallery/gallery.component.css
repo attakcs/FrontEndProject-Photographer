@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap');
+
+
+.container-fluid {
+    font-family: 'Cinzel Decorative', cursive;
+
+}
+
+a {
+  position: relative !important;
+  cursor:pointer;
+}
+
+.card{
+  width: 90%;
+}
+
+.category {
+  position: absolute !important;
+  bottom: -9px !important;
+/*   transform: translateX(-50%) !important; */
+  color: white;
+  background-color: black;
+  opacity: 0.7;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100% !important;
+}
+
+embed-responsive-1by1 {
+  padding-bottom: 10% !important;
+}
+
+.card-body, .card{
+  border: none !important;
+  background-color: white !important;
+}
+
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.back-to2-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+}
+
+#test {
+  
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .category{
+    font-size: 0.6em;
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  .category{
+    font-size: 0.8em;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .category{
+    font-size: 1.2em;
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+  .category{
+    font-size: 1.5em;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .category{
+    font-size: 2em;
+  }
+}
+
+
+
+
+
+

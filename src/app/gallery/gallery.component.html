@@ -1,0 +1,82 @@
+<div class="container-fluid m-0 p-0" style="position:relative">
+  <app-navbar></app-navbar>
+  <app-hero></app-hero>
+  <div class="card text-center m-0 mx-auto p-3" id='test'>
+    <div class="card-header p-0 m-0 mx-2">
+      <ul class="nav nav-tabs card-header-tabs d-flex justify-content-between align-items-center row m-0 p-0" id='imgs'>
+        <li class="nav-item active col-3 m-0 p-0">
+          <a class="text-dark nav-link embed-responsive embed-responsive-1by1" [class.active]="filterBy=='Street'" (click)="filterBy='Street'">
+            <img class='img-fluid imgs img-responsive w-100 embed-responsive-item' src="../assets/imgs/000031.JPG" alt="">
+            <h1 class="category text-center mx-auto w-100">Street</h1>
+          </a>
+        </li>
+        <li class="nav-item col-3 m-0 p-0">
+          <a class="text-dark nav-link embed-responsive embed-responsive-1by1" [class.active]="filterBy=='Human'" (click)="filterBy='Human'">
+            <img class='img-fluid imgs img-responsive w-100 embed-responsive-item' src="../assets/imgs/000036.JPG" alt="">
+            <h1 class="category text-center w-100">Nudes</h1>
+          </a>
+        </li>
+        <li class="nav-item col-3 m-0 p-0">
+          <a class="text-dark nav-link embed-responsive embed-responsive-1by1" [class.active]="filterBy=='Portraits'" (click)="filterBy='Portraits'">
+            <img class='img-fluid imgs img-responsive w-100 embed-responsive-item' src="../assets/imgs/H703026-R1-23-24.JPG" alt="">
+            <h1 class="category text-center w-100">Portraits</h1>
+          </a>
+        </li>
+        <li class="nav-item col-3 m-0 p-0">
+          <a class="text-dark nav-link embed-responsive embed-responsive-1by1" [class.active]="filterBy=='all'" (click)="filterBy='all'">
+            <img class='img-fluid imgs img-responsive w-100 embed-responsive-item' src="../assets/imgs/img432.jpg" alt="">
+            <h1 class="category text-center w-100">Show All</h1>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body m-0 p-0 py-3">
+      <button class='btn-dark' data-toggle="modal" data-target="#viewCarousel">View All</button>
+      <div class='row m-0 p-0 d-flex justify-content-between'>
+        <div class='col-md-4 col-sm-12 m-0 p-2 mx-auto' *ngFor="let img of (imgsArray | imageFilter:filterBy)">
+          <button type="button" class="btn m-0 p-0" data-toggle="modal" (click)="getBtnToWork('hello','hi', this.img )" data-target="#exampleModal">
+            <img src="../assets/imgs/{{img.src}}" class="img-fluid w-100 {{img.category}} imgsList" id="img{{img.id}}" style="object-fit: cover;
+  height: 600px !important;
+  object-position: center">
+          </button>
+        </div>
+        <div id="button">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade w-100" id="viewCarousel" tabindex="-1" role="dialog" aria-labelledby="labelModal" aria-hidden="true" style="max-height:100%">
+    <div class="modal-dialog modal-dialog-centered w-100" role="document">
+      <div class="modal-content w-100">
+        <div class="modal-header w-100" style="position:relative">
+          <div id="carouselExampleControls" class="carousel slide w-100" data-ride="carousel" style="position:relative">
+            <div class="carousel-inner w-100">
+              <div class="carousel-item" *ngFor="let img of imgsArray ; index as i" [ngClass]="{'active': i  == 0 }">
+                <img class="d-block w-100 img-fluid" src="../assets/imgs/{{ img.src }}" alt="Second slide">
+              </div>
+              <div class="" style="position:absolute; top:50%; width:100%">
+                <a class="carousel-control-prev my-auto" href="#carouselExampleControls" role="button" data-slide="prev" style="float:left; position:absolute; top:50%">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="float:right">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="close btnClose" data-dismiss="modal" aria-label="Close" style="position:absolute; top:15px; right:25px; box-shadow:none; outline:none; clear:both">
+            <span aria-hidden="true" class='text-white'>&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <a href="#" class="btn btn-light btn-lg back-to2-top border" role="button" id="back-to2-top"><i class="fas fa-chevron-up" style="float:right"></i></a>
+
+  
+  <app-footer></app-footer>
+</div>
+<!--start a carrousel-->

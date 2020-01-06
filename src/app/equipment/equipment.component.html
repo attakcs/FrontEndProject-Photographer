@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<app-hero></app-hero> 
+<div class="container" id="test">
+
+<div class="row">
+
+<!-- SEARCH BAR -->
+
+<div class="col-sm-12 col-md-6">
+<form  action="">
+  <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+    <div class="input-group">
+      <input name="searchInput" #searchInput="ngModel" [(ngModel)]="searchText" type="search" placeholder="Search cameras..." aria-describedby="button-addon1" class="form-control border-0 bg-light">
+      <div class="input-group-append">
+        <button id="button-addon1" type="submit" class="btn btn-link text-dark"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>	
+</div>
+
+<!-- CAMERA CARDS -->
+
+<div class="row" id="cameras">
+  <div *ngFor="let cams of equipment" class='d-flex align-items-stretch'>
+    <div *ngIf="filterCondition(cams)" class="card" style="width: 16rem;" >
+    <img class="card-img-top" src="{{cams.cam_picture}}" alt="cameras">
+    <div class="card-body">
+      <h4 class="card-title">{{cams.cam_brand}}</h4>
+      <hr>
+      <p>Model: {{cams.cam_model}}</p>
+      <hr>
+      <p>Year: {{cams.cam_year}}</p>
+      <hr>
+      <p class="card-text">{{cams.cam_description}}</p>
+    </div>
+  </div>
+</div>
+</div>
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+<app-footer></app-footer>
